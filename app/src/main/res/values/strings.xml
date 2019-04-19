@@ -6,8 +6,8 @@
     <string name="nav_header_title">MessIT</string>
     <string name="nav_header_subtitle">foodcommittee@iiitb.org</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
+    <string name="action_settings">Settings</string>
     <string name="ni">North-Indian</string>
     <string name="si">South-Indian</string>
     <string name="jain">Jain</string>
