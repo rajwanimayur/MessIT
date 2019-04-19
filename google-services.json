@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "116502709063",
+    "firebase_url": "https://messit-3dedd.firebaseio.com",
+    "project_id": "messit-3dedd",
+    "storage_bucket": "messit-3dedd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116502709063:android:2e97f71b0252b800",
+        "android_client_info": {
+          "package_name": "com.example.mayur.messit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116502709063-rgsj4sl7suf291matl3otbc3do9092tk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC8gfbnt8mtkvzuy0Nv8O-gwj7L7qX4Js"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116502709063-rgsj4sl7suf291matl3otbc3do9092tk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
