@@ -19,4 +19,20 @@
     <string name="nav_menu_contact_us">Contact Us</string>
     <string name="nav_menu_feedback">Send Feedback</string>
 
+    <string-array name="Days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <string-array name="Meal">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </string-array>
+
 </resources>
