@@ -20,6 +20,6 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_food_menu"
-        app:menu="@menu/activity_food_menu_drawer" />
+        app:menu="@menu/app_bar_overflow_menu" />
 
 </android.support.v4.widget.DrawerLayout>
