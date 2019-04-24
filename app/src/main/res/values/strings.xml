@@ -8,8 +8,8 @@
     <string name="nav_header_desc">Navigation header</string>
 
     <string name="action_settings">Settings</string>
-    <string name="ni">North-Indian</string>
-    <string name="si">South-Indian</string>
+    <string name="northIndian">North-Indian</string>
+    <string name="southIndian">South-Indian</string>
     <string name="jain">Jain</string>
 
     <string name="nav_menu_profile">Profile</string>
@@ -19,6 +19,26 @@
     <string name="nav_menu_contact_us">Contact Us</string>
     <string name="nav_menu_feedback">Send Feedback</string>
 
+
+    <string name="login_tv_email">Email</string>
+    <string name="login_editText_hint_email">College Email-Id</string>
+    <string name="login_tv_password">Password</string>
+    <string name="login_button_submit">Submit</string>
+    <string name="login_editText_hint_password">Enter Password</string>
+    <string name="reg_tv_name">Name</string>
+    <string name="reg_et_hint_name">Enter your full name</string>
+    <string name="reg_tv_rollNo">Roll No</string>
+    <string name="reg_et_hint_rollNo">Enter your roll no</string>
+    <string name="reg_tv_emailId">College email-id</string>
+    <string name="reg_et_hint_email">Enter your college email id</string>
+    <string name="reg_et_foodPreference">Food Preference</string>
+    <string name="reg_tv_contact">Contact Number:</string>
+    <string name="reg_btn_submit">Submit</string>
+    <string name="reg_btn_cancel">Cancel</string>
+    <string name="reg_tv_password">Enter Password</string>
+
+    <string name="login_err_auth_error">Authorization Failed. Please Enter Valid Credentials. You\'ve %1$d Attempts left </string>
+    <string name="login_tv_signUp">Don\'t have an account? Sign up</string>
     <string-array name="Days">
         <item>Monday</item>
         <item>Tuesday</item>

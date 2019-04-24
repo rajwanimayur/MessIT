@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <ProgressBar
+            android:id="@+id/reg_progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+        <TextView
+            android:id="@+id/reg_tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding"
+            android:text="@string/reg_tv_name"
+            android:textSize="@dimen/TextSize" />
+
+        <EditText
+            android:id="@+id/reg_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/reg_et_hint_name"
+            android:inputType="textPersonName"
+            android:padding="@dimen/padding"
+            android:textSize="@dimen/TextSize" />
+
+        <TextView
+            android:id="@+id/reg_tv_Rno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding"
+            android:text="@string/reg_tv_rollNo"
+            android:textSize="@dimen/TextSize" />
+
+        <EditText
+            android:id="@+id/reg_et_rollNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/reg_et_hint_rollNo"
+            android:padding="@dimen/padding"
+            android:textSize="@dimen/TextSize" />
+
+        <TextView
+            android:id="@+id/reg_tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding"
+            android:text="@string/reg_tv_emailId"
+            android:textSize="@dimen/TextSize" />
+
+        <EditText
+            android:id="@+id/reg_et_emailid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/reg_et_hint_email"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/padding"
+            android:textSize="@dimen/TextSize" />
+
+        <TextView
+            android:id="@+id/reg_tv_foodPreference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding"
+            android:text="@string/reg_et_foodPreference"
+            android:textSize="@dimen/TextSize" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding">
+
+            <RadioButton
+                android:id="@+id/jain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onFoodPreferenceSelect"
+                android:text="@string/jain" />
+
+            <RadioButton
+                android:id="@+id/northIndian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onFoodPreferenceSelect"
+                android:text="@string/northIndian" />
+
+            <RadioButton
+                android:id="@+id/southIndian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onFoodPreferenceSelect"
+                android:text="@string/southIndian" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/reg_tv_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding"
+            android:text="@string/reg_tv_contact"
+            android:textSize="@dimen/TextSize" />
+
+        <EditText
+            android:id="@+id/reg_et_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your mobile no"
+            android:inputType="phone"
+            android:padding="@dimen/padding" />
+
+        <TextView
+            android:id="@+id/passwordtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+
+            android:text="Password" />
+
+
+        <EditText
+            android:id="@+id/reg_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/reg_tv_password"
+            android:inputType="textPassword" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/reg_btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@drawable/button_background"
+                android:padding="@dimen/padding"
+                android:text="@string/reg_btn_submit"
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/TextSize" />
+
+            <Button
+                android:id="@+id/reg_btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@drawable/button_background"
+                android:padding="@dimen/padding"
+                android:text="@string/reg_btn_cancel"
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/TextSize"
+                android:onClick="onCancel"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

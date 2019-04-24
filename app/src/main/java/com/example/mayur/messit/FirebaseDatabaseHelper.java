@@ -2,6 +2,7 @@ package com.example.mayur.messit;
 
 import android.support.annotation.NonNull;
 
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,11 +26,11 @@ public class FirebaseDatabaseHelper {
 
     public FirebaseDatabaseHelper() {
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("Days");
+        databaseReference = firebaseDatabase.getReference();
     }
 
     public void readMenu(final DataStatus dataStatus, String daySelected, String mealSelected){
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Days").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 menuItems.clear();
@@ -48,5 +49,9 @@ public class FirebaseDatabaseHelper {
 
             }
         });
+    }
+
+    public void updateUserInfo(FirebaseUser firebaseUser, User aUser){
+        databaseReference.child("Users").child(firebaseUser.getUid()).setValue(aUser);
     }
 }

@@ -99,7 +99,6 @@ public class FoodMenuActivity extends AppCompatActivity
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 daySelected = parent.getItemAtPosition(position).toString();
                 Log.i("Info", daySelected);
-//                updateMenu(daySelected,mealSelected);
             }
 
             @Override
