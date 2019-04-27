@@ -5,4 +5,6 @@
     <color name="colorAccent">#52b7f8</color>
     <color name="backgroundFragment">#fafafa</color>
     <color name="TextColor">#fafafa</color>
+    <color name="buttonEnabled">#424242</color>
+    <color name="buttonDisabled">#e0e0e0</color>
 </resources>

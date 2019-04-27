@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -31,7 +30,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText editTextEmail;
     private EditText editTextContact;
     private EditText editTextPassword;
-    private Button regButton;
+    private Button regSubmitButton;
+    private Button regCancelButton;
 
     private String foodPreference;
 
@@ -47,14 +47,15 @@ public class RegistrationActivity extends AppCompatActivity {
         editTextEmail = (EditText) findViewById(R.id.reg_et_emailid);
         editTextContact = (EditText) findViewById(R.id.reg_et_contact);
         editTextPassword = (EditText) findViewById(R.id.reg_et_password);
-        regButton = (Button) findViewById(R.id.reg_btn_submit);
+        regSubmitButton = (Button) findViewById(R.id.reg_btn_submit);
+        regCancelButton = (Button) findViewById(R.id.reg_btn_cancel);
 
         progressBar = (ProgressBar)findViewById(R.id.reg_progressBar);
         progressBar.setVisibility(View.INVISIBLE);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        regButton.setOnClickListener(new View.OnClickListener() {
+        regSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 progressBar.setVisibility(View.VISIBLE);
@@ -79,6 +80,8 @@ public class RegistrationActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.INVISIBLE);
+                                regSubmitButton.setEnabled(false);
+                                regCancelButton.setEnabled(false);
                                 if(task.isSuccessful()){
                                     firebaseUser = firebaseAuth.getCurrentUser();
                                     addUserInfo();
@@ -90,6 +93,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                 }
                                 else {
                                     Toast.makeText(RegistrationActivity.this, "An Error Occurred", Toast.LENGTH_SHORT).show();
+                                    RegistrationActivity.super.recreate();
                                 }
                             }
                         });

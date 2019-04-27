@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
+import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.List;
 
 public class FragmentDinner extends Fragment {
@@ -28,8 +30,8 @@ public class FragmentDinner extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.dinner_fragment,container,false);
-        recyclerView = (RecyclerView)v.findViewById(R.id.dinner_RecyclerView);
+        v = inflater.inflate(R.layout.dinner_fragment, container, false);
+        recyclerView = (RecyclerView) v.findViewById(R.id.dinner_RecyclerView);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(), menu);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -49,7 +51,7 @@ public class FragmentDinner extends Fragment {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String daySelected = parent.getItemAtPosition(position).toString();
+                String daySelected= parent.getItemAtPosition(position).toString();
                 updateMenu(daySelected);
             }
 
@@ -58,14 +60,18 @@ public class FragmentDinner extends Fragment {
 
             }
         });
+
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+        spinner.setSelection(day - 2);
     }
 
-    private void updateMenu(String daySelected){
+    private void updateMenu(String daySelected) {
         new FirebaseDatabaseHelper().readMenu(new FirebaseDatabaseHelper.DataStatus() {
             @Override
             public void dataIsLoaded(List<Menu_Item> menuItems) {
                 v.findViewById(R.id.progressBar).setVisibility(View.GONE);
-                RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(),menuItems);
+                RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(), menuItems);
                 recyclerView.setAdapter(adapter);
             }
 
@@ -83,6 +89,6 @@ public class FragmentDinner extends Fragment {
             public void dataIsDeleted() {
 
             }
-        },daySelected,"Dinner");
+        }, daySelected, "Dinner");
     }
 }

@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:background="@drawable/button_background"
+                android:background="@drawable/button_background_enabled"
                 android:padding="@dimen/padding"
                 android:text="@string/login_button_submit"
                 android:textColor="@color/TextColor" />

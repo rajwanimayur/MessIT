@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class FragmentBreakfast extends Fragment {
@@ -57,6 +58,9 @@ public class FragmentBreakfast extends Fragment {
 
             }
         });
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+        spinner.setSelection(day - 2);
     }
 
     private void updateMenu(String daySelected){
