@@ -13,7 +13,7 @@ public class SignUpValidator {
     //private Matcher matcher;
 
     private static final String NAME_PATTERN = "^[a-zA-Z\\s]*$"; //allow alphabets and space
-    private static final String ROLL_NO_PATTERN = "[0-9]{7}";  //check it
+    private static final String ROLL_NO_PATTERN = "[MT|IMT|MS|DT][1-9][0-9]{6}";  //check it
     private static final String CONTACT_NO_PATTERN = "^(?:(?:\\+|0{0,2})91(\\S*[\\ -]\\S*)?|[0]?)?[789]\\d{9}|(\\d[ -]?){10}\\d$";
 
     public SignUpValidator() {

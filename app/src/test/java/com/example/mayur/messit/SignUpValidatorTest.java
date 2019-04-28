@@ -10,7 +10,7 @@ public class SignUpValidatorTest {
     //Correct Input
     @Test
     public void signUpValidator_CorrectDetails_ReturnsTrue() {
-        assertFalse(SignUpValidator.validate("Vaishali Walia", "2018129", "8727065333"));
+        assertFalse(SignUpValidator.validate("Vaishali Walia", "Preet Anjali", "8727065333"));
     }
 
     @Test
@@ -20,12 +20,12 @@ public class SignUpValidatorTest {
 
     @Test
     public void signUpValidator_InCorrectRollNo_ReturnsFalse() {
-        assertFalse(SignUpValidator.validate("123", "018129", "8727065333"));
+        assertFalse(SignUpValidator.validate("Vaishali Walia", "018129", "8727065333"));
     }
 
     @Test
     public void signUpValidator_InCorrectContactNo_ReturnsFalse() {
-        assertFalse(SignUpValidator.validate("123", "2018129", "4433"));
+        assertFalse(SignUpValidator.validate("Vaishali Walia", "MT2018129", "4433"));
     }
 
 }

@@ -16,5 +16,10 @@ pipeline {
         build 'MessIT_Test'
       }
     }
+    stage('Deploy'){
+    	steps{
+    		build 'MessIT_Deploy'
+    	}
+    }
   }
 }
