@@ -8,18 +8,18 @@ pipeline {
     }
     stage('Build') {
       steps {
-        build 'MessITBuild'
+        build 'MessIT_Build'
       }
     }
-    stage('Test'){
-      steps{
+    stage('Test') {
+      steps {
         build 'MessIT_Test'
       }
     }
-    stage('Deploy'){
-    	steps{
-    		build 'MessIT_Deploy'
-    	}
+    stage('Deploy') {
+      steps {
+        build 'MessIT_Deploy'
+      }
     }
   }
 }
